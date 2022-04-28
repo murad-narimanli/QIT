@@ -13,22 +13,14 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight'
 import LastPageIcon from '@material-ui/icons/LastPage'
 import Search from "../Search/Search";
 import _ from 'lodash'
-
-
-
 import {fetchAllCountries} from '../../redux/actions'
-
 import {AppState} from '../../types'
-
 import CountryCard from '../CountryCard/CountryCard'
-
 import './countrylist.scss'
 
 
 
 //table pagination action component 
-
-
 const useStyles1 = makeStyles((theme: Theme) =>
   createStyles({
     root: {
@@ -64,7 +56,6 @@ function TablePaginationActions(props: TablePaginationActionsProps) {
 
   const handleLastPageButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     onPageChange(event, Math.max(0, Math.ceil(count / rowsPerPage) - 1));
-
   };
 
   return (
@@ -123,7 +114,6 @@ const CountryList=()=> {
     //filter country by keyword
     const searchKeyword=useSelector((state:AppState)=>state.uiReducer.searchKeyWord)
     React.useEffect(()=>{
-        
         const _tempCountries:[]=countries.filter((country)=>country.name.toLowerCase().includes(searchKeyword?.toLowerCase()))as []
         setFilteredCountries(_tempCountries)
     },[searchKeyword, countries])
@@ -134,9 +124,9 @@ const CountryList=()=> {
 
 
     React.useEffect(()=>{
-        //
         const tempSorted=_.orderBy(filteredCountries, [sortBy], [asc ? "asc" : "desc"])  as []
-        setPaginatedCountries(tempSorted)       
+        const paginedC= tempSorted.slice(page*rowsPerPage, page*rowsPerPage+rowsPerPage) as []
+        setPaginatedCountries(paginedC)
     },[sortBy, filteredCountries , asc])
 
    
@@ -178,7 +168,7 @@ const CountryList=()=> {
     }
     //updating data according to pagination
     React.useEffect(()=>{
-       const paginedC=filteredCountries.slice(page*rowsPerPage, page*rowsPerPage+rowsPerPage) as []
+       const paginedC= filteredCountries.slice(page*rowsPerPage, page*rowsPerPage+rowsPerPage) as []
        setPaginatedCountries(paginedC)
     },[page, rowsPerPage, filteredCountries])
 
