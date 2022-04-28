@@ -7,7 +7,10 @@
       <change afterPath="$PROJECT_DIR$/../cv/Murad's Resume .pdf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../cv/index.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../nodejs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/QITTask.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
-    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunAnythingCache">
@@ -64,7 +67,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651127062168</updated>
       <workItem from="1651127064745" duration="2418000" />
-      <workItem from="1651129519196" duration="5585000" />
+      <workItem from="1651129519196" duration="6805000" />
     </task>
     <servers />
   </component>
