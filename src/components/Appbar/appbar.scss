@@ -1,0 +1,28 @@
+@import '../../styles/base';
+
+.appbar{   
+    height:80px;
+    padding-top:10px;
+    padding-right:2rem;
+    padding-left:2rem;
+   &__content{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+   }
+   &__content-left{
+       img{
+           margin-top: 30px;
+           max-width: 150px;
+           height: auto;
+           width: auto;
+       }
+       &__worldCircle{
+         height: 50px !important;
+         margin-right: 10px;
+       }
+   }
+   .active{
+       background-color: $primary;
+   }
+}

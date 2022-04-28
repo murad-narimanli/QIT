@@ -1,0 +1,63 @@
+@import '../../styles/base';
+
+.country-list{
+    &__topList{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        align-items: center;
+    }
+    &__search{
+        width: 180px;
+    }
+    margin:5rem auto 0 auto;
+    max-width: $max-width;
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+    &__sort{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        p{
+            margin-right:1rem;
+            font-weight: weight(medium);
+        }
+        #sort-country-select {
+            color: $primary!important;
+            font-weight: weight(medium);
+             //select list
+       
+        }
+        &__type{
+            margin-right: 20px;
+            display: flex;
+            font-size: 16px;
+            align-items: center;
+        }
+        svg{
+            color:$primary;
+            font-weight: weight(medium);
+        }
+       
+    }
+    &__pagination{
+        margin-top: 20px;
+        display:flex;
+        padding: 5px;
+        justify-content: center;
+        box-shadow: 0px 6px 16px rgb(165 155 151 / 19%);
+        button.MuiButtonBase-root.MuiIconButton-root.Mui-disabled.Mui-disabled {
+            background: transparent!important;
+        }
+        .MuiTableCell-root {
+
+            border-bottom: none!important;
+
+        }
+    }
+
+}
