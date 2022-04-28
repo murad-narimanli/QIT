@@ -2,7 +2,9 @@ import {CountryReducerState, FETCH_COUNTRIES_LOADING, FETCH_COUNTRIES_FAILURE, F
 
 const initiState:CountryReducerState={
     countries:[],
-    isLoading:false, 
+
+    isLoading:false,
+
     error:''
 }
 
@@ -16,6 +18,7 @@ export default function countryReducer(state:CountryReducerState=initiState, act
                 ...state, 
                 isLoading:true
             }
+
         //if fetching is successful 
         case FETCH_COUNTRIES_SUCCESS:
             return {
@@ -24,6 +27,7 @@ export default function countryReducer(state:CountryReducerState=initiState, act
                 countries:action.payload,
                 error:'',
             }
+
         //if fetching has any errors
         case FETCH_COUNTRIES_FAILURE:
             return {

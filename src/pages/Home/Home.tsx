@@ -1,5 +1,7 @@
 import React from 'react'
+
 import {useDispatch} from 'react-redux'
+
 import CountryList from '../../components/CountryList/CountryList'
 
 import {fetchAllCountries} from '../../redux/actions'
@@ -10,9 +12,9 @@ import './home.scss'
 
 
 const Home=()=> {
-
     //initialize dispatch
     const dispatch=useDispatch()
+
 
     //dispatch fetchAllCountries when page loads
     React.useEffect(()=>{
@@ -21,7 +23,6 @@ const Home=()=> {
 
     return (
         <div className="home">
-           
             {/* Inner contents country list/result */}
             <CountryList/>
          </div>

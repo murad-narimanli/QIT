@@ -22,6 +22,11 @@ export type CountryState={
 
 }
 
+
+
+
+
+
 //action types
 export type FetchAllCountriesLoadingAction={
     type: typeof FETCH_COUNTRIES_LOADING
@@ -35,5 +40,6 @@ export type FetchAllCountriesFailureAction={
     type: typeof FETCH_COUNTRIES_FAILURE
     payload: string
 }
+
 
 export type CountryActions= FetchAllCountriesLoadingAction | FetchAllCountriesSuccessAction | FetchAllCountriesFailureAction
