@@ -155,12 +155,6 @@ const CountryList = () => {
 
 
 
-    // sort effect
-    React.useEffect(() => {
-        const tempSorted = _.orderBy(filteredCountries, [sortBy], [asc ? "asc" : "desc"]) as []
-        const paginedC = tempSorted.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) as []
-        setPaginatedCountries(paginedC)
-    }, [sortBy, filteredCountries, asc])
 
 
     //handle sort
@@ -186,6 +180,13 @@ const CountryList = () => {
 
     //const emptyRows = rowsPerPage - Math.min(rowsPerPage, filteredCountries.length - page * rowsPerPage);
 
+    // sort effect and pagination fix
+    React.useEffect(() => {
+        const tempSorted = _.orderBy(filteredCountries, [sortBy], [asc ? "asc" : "desc"]) as []
+        const paginedC = tempSorted.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) as []
+        setPaginatedCountries(paginedC)
+    }, [sortBy, filteredCountries, asc ,page, rowsPerPage])
+
 
     // page change
     const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
@@ -198,14 +199,6 @@ const CountryList = () => {
         setRowsPerPage(parseInt(event.target.value, 10));
         setPage(0);
     }
-
-
-    //updating data according to pagination
-    React.useEffect(() => {
-        const paginedC = filteredCountries.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage) as []
-        setPaginatedCountries(paginedC)
-    }, [page, rowsPerPage, filteredCountries])
-
 
 
     return (
